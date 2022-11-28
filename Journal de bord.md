@@ -9,3 +9,7 @@
 
 10/11 : réorganisation des fichiers, je me suis emmelée les pinceaux avec pleins de fichiers qui ne correspondaient pas à mon organisation sur le git et je ne pouvais donc pas mettre à jours les documents. 
 Ecriture d'un script pour récupérer l'en-tête de la réponse du serveur.
+
+16/11: essais sur le site internet (html)
+
+23/11: stockage des dumps textuels
