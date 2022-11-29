@@ -12,4 +12,4 @@ Ecriture d'un script pour récupérer l'en-tête de la réponse du serveur.
 
 16/11: essais sur le site internet (html)
 
-23/11: stockage des dumps textuels
+23/11: stockage des dumps textuels et aspirations du contenu des pages
