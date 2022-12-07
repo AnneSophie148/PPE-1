@@ -18,7 +18,7 @@ then
 	exit
 fi
 
-mot="nostalgie" # à modifier
+mot="nostalgia" # à modifier
 
 echo $fichier_urls;
 basename=$(basename -s .txt $fichier_urls)
@@ -27,7 +27,7 @@ echo "<html><body>" > $fichier_tableau
 echo "<h2>Tableau $basename :</h2>" >> $fichier_tableau
 echo "<br/>" >> $fichier_tableau
 echo "<table>" >> $fichier_tableau
-echo "<tr><th>ligne</th><th>code</th><th>URL</th><th>encodage</th><th>compte</th><th>aspirations</th><th>dumps</th><td>contextes</td></tr>" >> $fichier_tableau
+echo "<tr><th>ligne</th><th>code</th><th>URL</th><th>encodage</th><th>aspirations</th><th>dumps</th><th>compte</th><td>contextes</td></tr>" >> $fichier_tableau
 
 lineno=1;
 while read -r URL; do
@@ -57,9 +57,10 @@ while read -r URL; do
 	if [[ $code -eq 200 ]]
 	then
 		dump=$(lynx -dump -nolist -assume_charset=$charset -display_charset=$charset $URL)
-		echo "$dump" > "dumps-text/$basename-$lineno.txt" 
-		compte=$(echo $dump|egrep -o "nostalgia" | wc -l)
-		contexte=$(echo "$dump"|grep -E -A2 -B2 "nostalgia")
+		echo "$dump" > "dumps-text/$basename-$lineno.html" 
+		compte=$(echo $dump|egrep -o $mot | wc -l)
+		#on va cherche les contextes:
+		contexte=$(echo "$dump"|grep -E -A2 -B2 $mot)
 		echo "$contexte" > "contextes/$basename-$lineno.txt"
 		
 		
@@ -74,9 +75,18 @@ while read -r URL; do
 		charset=""
 	fi
 
-	echo "<tr><td>$lineno</td><td>$code</td><td><a href=\"$URL\">$URL</a></td><td>$charset</td><td>$aspiration</td><td>$dumps</td><td>$compte</td></tr>" >> $fichier_tableau
+	echo "<tr><td>$lineno</td><td>$code</td><td><a href=\"$URL\">$URL</a></td><td>$charset</td><td><a href=\"../aspirations/$basename-$lineno.html\">aspiration</a></td><td><a href=\"../dumps-text/$basename-$lineno.html\">dump</a></td><td>$compte</td></tr>" >> $fichier_tableau
 	echo -e "\t--------------------------------"
 	lineno=$((lineno+1));
 done < $fichier_urls
 echo "</table>" >> $fichier_tableau
 echo "</body></html>" >> $fichier_tableau
+
+  # construction des concordance avec une commande externe
+
+  bash programmes/concordance.sh ./dumps-text/fich-$lineno.txt $mot > ./concordances/fich-$lineno.html
+
+	echo "<tr><td>$lineno</td><td>$code</td><td><a href=\"$URL\">$URL</a></td><td>$charset</td><td><a href=\"../aspirations/$basename-$lineno.html\">html</a>fmot </td><td><a href=\"../dumps-text/fich-$lineno.txt\">text</a></td><td>$compte</td><td><a href=\"../contextes/$basename-$lineno.txt\">contextes</a></td><td><a href=\"../concordances/$basename-$lineno.html\">concordance</a></td></tr>" >> $fichier_tableau
+	echo -e "\t--------------------------------"
+	lineno=$((lineno+1));
+done < $fichier_urls
