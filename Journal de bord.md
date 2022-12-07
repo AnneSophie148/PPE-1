@@ -16,4 +16,4 @@ Ecriture d'un script pour récupérer l'en-tête de la réponse du serveur.
 
 30/11: création de la section contextes, et des comptes du mot nostalgie. Il reste à insérer les liens dans le tableau et à créer le concanrdancier.
 
-712: correction de la page tableaux mais encore des problèmes sur les contextes. Script itrameur.
+7/12: correction de la page tableaux mais encore des problèmes sur les contextes. Script itrameur.
