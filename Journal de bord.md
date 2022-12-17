@@ -17,3 +17,5 @@ Ecriture d'un script pour récupérer l'en-tête de la réponse du serveur.
 30/11: création de la section contextes, et des comptes du mot nostalgie. Il reste à insérer les liens dans le tableau et à créer le concanrdancier.
 
 7/12: correction de la page tableaux mais encore des problèmes sur les contextes. Script itrameur.
+
+14/12: installation du module wordcloud pour faire les nuages de mots. Correction du script de base.
