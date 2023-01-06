@@ -19,3 +19,5 @@ Ecriture d'un script pour récupérer l'en-tête de la réponse du serveur.
 7/12: correction de la page tableaux mais encore des problèmes sur les contextes. Script itrameur.
 
 14/12: installation du module wordcloud pour faire les nuages de mots. Correction du script de base.
+
+04/01: utilisation de masques sur wordcloud_cli pour donner une forme aux nuages de mots. J'ai également travaillé sur l'index pour créer des balises faites d'images avec un lien cliquable pour accéder au page tableau. J'ai également travaillé sur le visuel des tableaux.
