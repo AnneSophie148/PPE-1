@@ -21,3 +21,5 @@ Ecriture d'un script pour récupérer l'en-tête de la réponse du serveur.
 14/12: installation du module wordcloud pour faire les nuages de mots. Correction du script de base.
 
 04/01: utilisation de masques sur wordcloud_cli pour donner une forme aux nuages de mots. J'ai également travaillé sur l'index pour créer des balises faites d'images avec un lien cliquable pour accéder au page tableau. J'ai également travaillé sur le visuel des tableaux.
+
+janvier: beaucoup de travail sur la page du site. Des difficultés car c'est la première fois que je fais un site internet et je n'ai donc pas l'habitude d'utiliser html java et css. J'ai surtout eu du mal à faire les onglets et la page de fond d'accueil mais j'ai réussi a surmonter ces difficultés.

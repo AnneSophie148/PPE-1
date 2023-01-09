@@ -1,12 +1,262 @@
+<!DOCTYPE html>
 <html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Projet Encadré</title>
 
-<head>
-<meta charset="UTF-8" />
-<title>Programmation et Projet encadré</title>
-</head>
+        <!-- installation de bulma via le CDN -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
+        <script defer src="script.js"></script>
+        <link rel="stylesheet" href="app.css">
+        
+    </head>    
+    <body>
+        <div class="js-tab-content" id="accueil">
+            <div class="hero">
+                <div class="hero-inner">
+                    <p class="is-size-1 has-text-white" data-aos="zoom-in" data-aos-delay="800">
+                        NOSTALGIA
+                    </p>
+                    <p class="is-size-3 has-text-white" data-aos="fade-up" data-aos-delay="1000">
+                        Langues : Anglais, Français, Chinois
+                   </p>
+                </div>
+            </div>
+        </div>
+        <div class="hero-foot">
+            <div class="container js-tabs-container">
+            <div class="tabs" style="float:right">
+                <ul>
+                    <!-- chaque item contient un attribut data-tab dont la valeur correspond à l'ID du contenu correspondant -->
+                    <li class="is-active" data-tab="accueil"><a>Accueil</a></li>
+                    <li data-tab="choix">
+                    <a href="#choix">Nostalgia ?</a>
+                    </li>
+                    <li data-tab="nuages">
+                        <a href="#nuages">Nuages de mots</a>
+                    </li>
+                    <li data-tab="itrameur">
+                        <a href="#itrameur">Analyse iTrameur</a> </li>
+                    <li data-tab="tableaux">
+                        <a href="#tableaux">Tableaux</a> </li>
+                    <li data-tab="scripts">
+                        <a href="#scripts">Scripts</a> </li>
+                    <li data-tab="about">
+                        <a href="#about">A propos de nous</a> </li>
+                    
+                </ul>
+            </div>
+            
+            <!-- entourer les tabs et leurs contenus correspondants d'un élément ayant la classe js-tabs-container. -->
+            
 
-<body>
-<p>Page initiale du PPE.</p>
-</body>
+                <!-- contenu de la tab dont l'ID correspond à la valeur de l'attribut data-tab du lien associé -->
+                <!-- le contenu initialiement visible au chargement de la page ne porte pas la classe has-display-none -->
+                <!-- chacun des contenus porte la classe js-tab-content -->
+          
+                    <div class="has-display-none js-tab-content" id="choix">
+                    <article class="message is-dark">
+                        <div class="is-size-1 has-background-warning-light"><br>Choix du mot nostalgie</div>
+                        <div class="message-body">
+                            <h1>Pourquoi le mot nostalgia ?</h1>
+                        </div>
+                    </article>
+                    <p> Notre projet PPE consiste à l'étude du mot "nostalgie" en français, anglais, portugais et mandarin.
+                        L'idée nous est venu du portugais, étant deux personnes de langue maternelle portugaise au sein du groupe, nous avons pensé au mot portugais "saudade" dont la traduction en français est ambigue. 
+                        L'une des traductions possibles du mot est "nostalgie", toutefois ce mot existe également en portugais mais ne signifie pas exactement la même chose. 
+                        Il semble avoir une connotation de tristesse qu'on ne retrouve pas dans le mot "saudade". 
+                        Nous avons donc choisi d'étudier cet angle en analysant en portugais les mots "nostalgia" et "saudade", puis de nous pencher vers la traduction anglaise "nostalgia", vers le français "nostalgie" et le mandarin 乡愁 xiāngchóu.
+                    </p>
+                    <p style="text-align:center;">
+                        <br><img src="./images/https3A2F2Fcdn.png" title="nostalgia?" align="middle"/>  
+                    </p>
 
+                </div>
+
+                <!-- contenu de la tab "nuages" -->
+                <div class="has-display-none js-tab-content" id="nuages">
+                    <article class="message is-info">
+                        <div class="is-size-1 has-background-warning-light"><br>Nuages de mots</div>
+                        <div class="message-body">
+                            Voici les nuages de mots pour chaque langue
+                        </div>
+                    </article>
+                    <p> Pour mieux comprendre le sens du mot nostalgie et la polycémie de ses traductions, nous nous sommes intéressées à ces concordances dans le corpus.<br></p>
+                    <p> Nous avons donc cherché quels étaient les mots qui apparaissaient le plus souvent dans les corpus contenant le mot nostalgie pour chaque langue.</p>
+                    <br> <p class="is-size-3" align="center"><strong>Nostalgia en portugais</strong></p>
+                    <p style="text-align:center;">
+                        <br> <img src="images/image-pt.png" title="nostalgia en portugais" align="middle"/>   
+					</p>
+                    <p><br> On remarque dans les mots les plus fréquents "passado" "saudade" "vida" et "marketing". Cela permet d'abord d'observer l'aspect psychologique du mot nostalgie qui réfère souvent à une forme de regret du passé et une réflexion sur la vie.</p>
+                    <p>Le terme marketing est également intéressant car beaucoup de corpus mentionne l'usage en marketing du sentiment de nostalgie pour promouvoir des produits et booster les ventes. Enfin, on peut également voir le lien entre nostalgia et saudade qui sont donc synonymes et que comme nous le verrons avec le nuage de mot "saudade", n'ont pas exactement les mêmes connotations.</p>
+					
+                    <br> <p class="is-size-3" align="center"><strong>Saudade en portugais</strong></p>
+					<p style="text-align:center;">
+						<br> <img src="images/image-saudade.png" title="saudade" align="middle" width="575" 
+                        height="578"/>   
+                    </p>
+                    <p><br>Nous pouvons remarquer que le mot "saudade" renvoit aux termes "pessoa", "alguem", "sentimento". Il semblerait donc que "saudade" fasse davantage référence au fait de ressentir un manque de quelqu'un.</p>
+					<p>Il s'agit donc du fait de se sentir seule, comme le montre le terme "solidao" et de regretter les temps passés avec cette personnes.</p>
+                   
+                    <br> <p class="is-size-3" align="center"><strong>Nostalgie en français</strong></p>
+                    <p style="text-align:center;">
+						<img src="images/image-fr.png" title="nostalgia en français" align="middle" width="575"/>   
+					</p>
+                    <br> <p class="is-size-3" align="center"><strong>乡愁 en chinois</strong></p>
+                    <p style="text-align:center;">
+						<img src="images/nuage-ch.png" title="xiangchou en chinois align="middle" width="575"/>   
+					</p>
+
+                </div>
+
+                <div class="has-display-none js-tab-content" id="itrameur">
+                    <article class="message is-dark">
+                        <div class="is-size-1 has-background-warning-light"><br>Analyse itrameur</div>
+                        <div class="message-body">
+                            <h1>Concordances et comparaisons</h1>
+                        </div>
+                    </article>
+                    <p> Description des résultats.
+                    </p>
+                </div>
+
+                <!-- contenu de la tab "tableaux" -->
+                <div class="has-display-none js-tab-content" id="tableaux">
+                    <article class="message is-primary">
+                        <div class="is-size-1 has-background-warning-light"><br>Tableaux</div>
+                        <div class="message-body">
+                            Voici les tableaux
+                        </div>
+                    </article>                  
+                    
+                    <p align="center" class=is-size-2>
+                        Les tableaux en portugais <br><br> </p>
+                        <div style="float:left">
+                            <p class="is-size-3"><strong>Nostalgia</strong></p>
+                            <a href="./tableaux/tableaux_pt.HTML"><img src="./images/tab-tableaux/2.jpg" width="500" title="Tableaux portugais" alt="Tableaux portugais"></a>
+                            <br />
+                        </div>
+                        <div style="float:right">
+                            <p class="is-size-3"><strong>Saudade</strong></p>
+                            <a href="./tableaux/tableau_saudade_pt.HTML"><img src="./images/tab-tableaux/1.jpg" width="500" title="Tableaux portugais" alt="Tableaux portugais" align="right"></a>
+                            <br />
+                        </div>                     
+                    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br> 
+                    <p align="center" class=is-size-2>
+                        Les tableaux en français et en anglais <br><br> </p>
+                    <div style="float:left">
+                        <p class="is-size-3"><strong>Nostalgie</strong></p>
+                        <a href="./tableaux/tableau_fr.HTML"><img src="./images/tab-tableaux/3.jpg" width="500" title="Tableaux français" alt="Tableaux français"></a>
+                        <br />                   
+                    </div>
+                    <div style="float:right">
+                        <p class="is-size-3"><strong>Nostalgia</strong></p>
+                        <a href="./tableaux/tableau_eng.HTML"><img src="./images/tab-tableaux/nostalgia.jpg" width="500" title="Tableaux anglais" alt="Tableaux anglais"></a>
+                        <br />   
+                    </div>
+                    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br> 
+                    <p align="center" class=is-size-2>
+                        Les tableaux en chinois <br><br> </p>
+                        <div align="center">
+                            <p class="is-size-3"><strong>乡愁</strong></p>
+                        <a href="./tableaux/tableau_ch.HTML"><img src="./images/tab-tableaux/xiangchou.jpg" width="500" title="Tableaux chinois" alt="Tableaux chinois"></a> 
+                        </div>                    
+                </div>
+                <!-- contenu de la tab "script" -->
+                <div class="has-display-none js-tab-content" id="scripts">
+                    <article class="message is-success">
+                        <div class="is-size-1 has-background-warning-light"><br>Scripts</div>
+                        <div class="message-body">
+                            <a href="#scriptbase">1. Script pour la création automatique des tableaux <br></a>
+                            <a href="#concordance">2. Script pour la création du concordancier <br> </a>
+                            <a href="#script_itrameur">3. Script pour itrameur </a>		
+                        </div>
+                    </article>
+                    <div id="scriptbase"> <p align="center" class=is-size-2 style="background-color:whitesmoke">
+                        Script de base pour la création des tableaux <br><br></p>
+                    <img src="./images/script/script1.png" title="base_tableau1" alt="script_tableaux">
+                    <img src="./images/script/script1.2.png" title="base_tableau2" alt="script_tableaux"> 
+                    <a href="./programmes/base_tableaux_fichier.sh"><br>Cliquez pour télécharger le script base tableaux</a>
+                    </div>
+
+                    <br><br> <div id="concordance"> <p align="center" class=is-size-2 style="background-color:whitesmoke">
+                        Script de base pour la création du concordancier <br><br></p>
+                        <img src="./images/script/concordance.png" title="script_concordances" alt="script_concordancier"> 
+                        <a href="./programmes/concordance.sh"><br>Cliquez pour télécharger le script du concordancier</a>
+                    </div>
+
+                    <br><br> 
+                    <div id="script_itrameur"><p align="center" class=is-size-2 style="background-color:whitesmoke">
+                        Script de base pour iTrameur<br><br></p>
+                        <img src="./images/script/itrameur.png" title="script_itrameur" alt="script_itrameur">
+                        <a href="./programmes/correction_itrameur.sh"><br>Cliquez pour télécharger le script de iTrameur</a>
+                    </div>
+                </div>
+						
+				<!-- contenu de la tab "A propos de nous" -->
+                <div class="has-display-none js-tab-content" id="about">
+                    <article class="message is-primary">
+                        <div class="is-size-1 has-background-warning-light"><br>A propos de nous</div>
+                        <div class="message-body">
+                            Anne-Sophie, Elodie et Ji, trois étudiantes en master TAL
+                        </div>
+                    </article>
+
+                    <p style="text-align: center;">
+                        <br> <br> <strong> Anne-Sophie Foussat </strong>
+                        <figure class="image is-128x128" style="float:left">
+                            <img class="is-rounded" src="./images/us/AnneSophie.png" alt="Photo de Anne-Sophie">
+                        </figure>
+					</p>
+                    <br><br><ol style="margin-left: 15%; margin-right: 10%; list-style-type: disc;" >
+                        <li>
+                            Issue d'une licence en Langues Etrangère Appliquée anglais portugais à Sorbonne Université, je me suis ensuite dirigée vers le master TAL à Sorbonne Nouvelle.
+                        </li>
+                        <li>
+                                Langues parlées : français, portugais, anglais et espagnol
+                        </li>
+                    </ol>
+                    <br>
+                    <p style="text-align: center;">
+                        <br> <br> <strong> Elodie Esteves </strong>
+                        <figure class="image is-128x128" style="float:left">
+                            <img class="is-rounded" src="./images/us/Elodie.jpg" alt="Photo de Elodie">
+                        </figure>
+					</p>
+
+                    <br><ol style="margin-left: 15%; margin-right: 10%; list-style-type: disc;" >
+                        <br> 
+                        <li>
+                            Description
+                        </li>
+                        <li>
+                                Langues parlées : 
+                        </li>
+                    </ol>
+                    
+                    
+                    <p style="text-align: center;">
+                        <br> <br> <strong> Ji An </strong>
+                        <figure class="image is-128x128" style="float:left">
+                            <br><br> <img class="is-rounded" src="images/us/ja.jpeg" alt="Photo de Ji AN">
+                        </figure>
+					</p>
+                    
+                    <br> <ol style="margin-left: 15%; margin-right: 10%; list-style-type: disc;" >
+                        <br><br>
+                        <li>
+                            Après des études en Master Sciences du langage à l'Inalco, 
+                            je prépare actuellement mon mémoire portant sur les dialectes yue, 
+                            une langue sinitique parlée dans la Chine méridionale.
+                            En même temps, je continue mes études en M1 TAL à Paris Nanterre.
+                        </li>
+                        <li>
+                            Langues parlées : chinois yue, chinois mandarin, français, anglais
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        <script src="app.js"></script>
+    </body>
 </html>
